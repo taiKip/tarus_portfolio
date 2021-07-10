@@ -1,0 +1,19 @@
+.skills-set{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+}
+.skills-set h4{
+    font-size: 1.3em;
+}
+.skills-set li{
+    border: 1px solid black;
+   margin: 5px;
+   padding: 5px;
+   background: black;
+   color: white;
+   font-size: 1.2em;
+ 
+}

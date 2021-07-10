@@ -1,0 +1,6 @@
+.right-pane{
+   top: 0;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}

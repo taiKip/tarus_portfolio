@@ -1,0 +1,41 @@
+.tile{
+    height: 160vh;
+    color:white;
+    display: grid;
+    padding:30px;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(8,1fr);
+}
+.tile img{
+   width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.home-page{
+    grid-column: 1/4;
+    width: 360px;
+    height: 800px;
+    grid-row: 1/4;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.menu{
+    width: 216px;
+    height: 480px;
+    grid-column:6/8 ;
+}
+
+
+.basket{
+ width: 216px;
+    height: 480px;
+    grid-column:1/4 ;
+    grid-row: 5/8;
+}
+.checkout{
+   grid-column: 5/8;
+    width: 360px;
+    height: 800px;
+    grid-row: 3/6
+}

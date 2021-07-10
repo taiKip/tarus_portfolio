@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
+import classes from './App.module.css';
+import AboutPage from './components/HomePage/AboutPage';
+import HomePage from './components/HomePage/HomePage';
+import Main from './components/Main'
+
+import PageContextProvider from './contexts/PageContextProvider';
+import { useOnScreen } from './hooks/useOnScreen';
 function App() {
+
+  const {setRef,visible} = useOnScreen({threshold:0.25})
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.App}>
+    
+      <HomePage />
+      <AboutPage ref={setRef} inView={visible}/>
+      <PageContextProvider>
+        <Main />
+      </PageContextProvider>
     </div>
   );
 }
