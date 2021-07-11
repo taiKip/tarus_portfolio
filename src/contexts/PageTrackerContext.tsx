@@ -1,9 +1,9 @@
 
 import { createContext } from 'react'
-type InitialState = {
-    state: string,
-    setState: (a:string) => void
-}
-const PageTrackerContext = createContext<InitialState>({state:'',setState:(a)=>console.warn("something went wrong")})
+import { IState } from '../interfaces/IState'
+
+
+
+const PageTrackerContext = createContext<IState>({state:'',setState:(a)=>console.warn("no string provided")})
 
 export default PageTrackerContext

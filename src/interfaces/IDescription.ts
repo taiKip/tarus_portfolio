@@ -1,3 +1,8 @@
 export interface IDescription{
-    appname:string
+    about: string,
+    buildTools: string,
+    github: string,
+    id: string,
+    name: string,
+    websiteLink:string
 }

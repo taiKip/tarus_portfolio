@@ -1,10 +1,11 @@
 .tile{
-    height: 160vh;
+    height: 180vh;
     color:white;
     display: grid;
     padding:30px;
     grid-template-columns: repeat(8,1fr);
     grid-template-rows: repeat(8,1fr);
+
 }
 .tile img{
    width: 100%;
@@ -24,18 +25,26 @@
     width: 216px;
     height: 480px;
     grid-column:6/8 ;
+     border-radius: 12px;
+    overflow: hidden;
 }
 
 
-.basket{
+
+.cart{
  width: 216px;
     height: 480px;
     grid-column:1/4 ;
     grid-row: 5/8;
+     border-radius: 12px;
+    overflow: hidden;
 }
+
 .checkout{
    grid-column: 5/8;
     width: 360px;
     height: 800px;
-    grid-row: 3/6
+    grid-row: 3/6;
+ border-radius: 12px;
+    overflow: hidden;
 }

@@ -1,8 +1,8 @@
 export interface IPage{
-
-    name: string,
-    description:string,
+neme:string,
+    id: string,
+    about:string,
     buildTools: string,
-    gitHubLink: string,
-    websitLink:string
+    github: string,
+    websiteLink:string
 }

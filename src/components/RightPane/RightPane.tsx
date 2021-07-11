@@ -1,26 +1,21 @@
 
-import { IPreview } from '../../interfaces/IPreview'
 import classes from './RightPane.module.css'
 import Tile from './Tile'
-import basket from '../../assets/first_burger_images/first_burger_basket.png'
-import checkout from '../../assets/first_burger_images/first_burger_checkout.png'
-import loading from '../../assets/first_burger_images/first_burger_home_loading.png'
+
+import useFetch from '../../hooks/useFetch'
+
+
 
 
 const RightPane = () => {
-    const burgerPreview:IPreview= {
-        basketImage: basket,
-        primaryImage:"L6B:HQD-.T-N={s+EQNLS%s+I@NL",
-        secondaryImage: loading,
-        tertiaryImage: checkout,
-        title:"page-1"
-  }
+ 
+    const { dataArray} = useFetch()
+ 
+    
   
     return (
         <div className={classes["right-pane"]}>
-            <Tile preview={burgerPreview} />
-            <Tile preview={burgerPreview}    />
-            <Tile preview={burgerPreview}   />
+            {dataArray && dataArray.map((data) => <Tile key={data.id} preview={data.images} id={data.id}/>)}
         </div>
     )
 }

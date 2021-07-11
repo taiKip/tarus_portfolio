@@ -1,9 +1,10 @@
-import { PageOptions } from '../Types/PageOptions';
+
+import { IImage } from './IImage';
 export interface IPreview{
-    title: PageOptions,
-    primaryImage: any,
-    secondaryImage: any,
-    tertiaryImage: any,
-    basketImage:any
+    id: string,
+    cart: IImage,
+    checkout: IImage,
+    home: IImage,
+    loading:IImage
     
 }

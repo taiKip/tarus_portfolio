@@ -1,12 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap');
 .app-specs{
-width: 100%;
+width: 60%;
 height: 100%;
-grid-column: 2/4;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
 }
 .app-specs h1{
     font-size: 5rem;
     font-weight: 800;
     font-family: 'IBM Plex Sans Condensed', sans-serif;
     
+}
+.links{
+    list-style: none;
+    width: 100%;
+
+  height: 50px;
+   display: flex;
+   gap: 2rem;
+   justify-content: flex-end;
+}
+.links li{
+    display: grid;
+    place-items: center;
+  width: 50px;
+  color: black;
+   display: inline;
+}
+.links  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

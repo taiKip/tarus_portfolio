@@ -8,46 +8,58 @@ import { useOnScreen } from '../../hooks/useOnScreen'
 
 import { IPreview } from '../../interfaces/IPreview'
 import classes from './Tile.module.css'
-import { Blurhash } from 'react-blurhash'
-
-const Tile = ({ preview }: { preview: IPreview }) => {
-
-    const { setState } = useContext(PageTrackerContext)
+import { useState } from 'react'
+import CustomBlurHash from './CustomBlurHash'
+const Tile = ({ preview ,id}: { preview: IPreview,id:string}) => {
+    const [menuImageIsLoaded, setMenuImageIsLoaded] = useState(false)
+    const [cartImageIsLoaded, setCartImageIsLoaded] = useState(false)
+    const [homeImageIsLoaded, setHomeImageIsLoaded] = useState(false)
+    const [checkoutImageIsLoaded, setCheckoutImageIsLoaded] = useState(false)
+ 
 
     const { setRef, visible } = useOnScreen({ threshold: 0.15 })
-
+const {setState} = useContext(PageTrackerContext)
     useEffect(() => {
         if (visible) {
-        
- setState(preview.title)
+     setState(id)
+            return;
+        }
+     
+    })
+    
+    const handleHomeOnload = () => {
+        setHomeImageIsLoaded(true)
     }
-})
+    const handleCartOnload = () => {
+        setCartImageIsLoaded(true)
+    }
+    const handleChekOutOnload = () => {
+        setCheckoutImageIsLoaded(true)
+    }
+    const handleMenuOnload = () => {
+        setMenuImageIsLoaded(true)
+    }
 
     const styles = `${classes.tile}  ${visible ? classes.black : ""}`
     return (
         <div className={styles} ref={setRef}>
 
             <div className={classes["home-page"]}>
-                
-                <Blurhash
-                    hash={preview.primaryImage}
-                    width={360}
-                    height={800}
-                    resolutionX={32}
-                    resolutionY={32}
-                    punch={1}
-                    
-                />
-
+                {!homeImageIsLoaded&&<CustomBlurHash hash={preview.home.hash} height={800} width={360} />}
+              
+                <img src={preview.home.url} alt="homePage" onLoad={handleHomeOnload} />
            </div>
             <div className={classes.menu}>
-                <img src={preview.secondaryImage}/>
+                {!menuImageIsLoaded && <CustomBlurHash hash={preview.loading.hash} height={480} width={216} />}
+                <img src={preview.loading.url} alt="menu preview" onLoad={handleMenuOnload }/>
            </div>
-            <div className={classes.basket}>
-                <img src={ preview.basketImage} />
+            <div className={classes.cart} onLoad={handleCartOnload}>
+                {!cartImageIsLoaded && <CustomBlurHash hash={preview.cart.hash} height={480} width={216} />}
+                <img src={preview.cart.url} alt="cart preview"/>
            </div>
-            <div className={classes.checkout}>
-                <img src={preview.tertiaryImage}/>
+            <div className={classes.checkout} onLoad={handleChekOutOnload}>
+                {!checkoutImageIsLoaded && <CustomBlurHash hash={preview.checkout.hash} height={800} width={360} />}
+                <img src={preview.checkout.url} alt="checkout preview"/>
            </div>
 
         </div>
