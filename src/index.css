@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&display=swap');
 :root{
-  --primary:rgb(204, 188, 188);
+  --primary:white;
 }
 *{
   box-sizing: border-box;

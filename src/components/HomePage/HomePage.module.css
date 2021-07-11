@@ -60,11 +60,10 @@ line-height: 1.5em;
 }
 @media  screen and (min-width: 700px){
 .home-page h3 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid black; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
+  overflow: hidden;
+  border-right: .15em solid black; 
+  white-space: nowrap;
+  margin: 0 auto;
   animation: 
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;

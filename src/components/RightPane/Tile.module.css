@@ -116,3 +116,18 @@
    }
     
 }
+@media  screen and (max-width:900px) {
+   .tile{
+       height: 100vh;
+        display: block;
+        left: 0;
+   }
+   .home-page{
+     width: 216px;
+    height: 480px;
+   }
+   .cart{
+       display: none;
+   }
+    
+}

@@ -12,8 +12,9 @@ const Main = () => {
           <LeftPane />
         
           <RightPane />
-      
-      </QueryClientProvider>
+            
+          </QueryClientProvider>
+         
     </div>
   );
 };

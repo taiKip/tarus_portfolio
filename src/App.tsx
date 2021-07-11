@@ -1,5 +1,6 @@
 
 import classes from './App.module.css';
+import Contact from './components/Contact/Contact';
 import AboutPage from './components/HomePage/AboutPage';
 import HomePage from './components/HomePage/HomePage';
 import Main from './components/Main'
@@ -17,6 +18,7 @@ function App() {
       <PageContextProvider>
         <Main />
       </PageContextProvider>
+      <Contact/>
     </div>
   );
 }
