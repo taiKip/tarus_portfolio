@@ -1,5 +1,5 @@
 .tile{
-    height: 180vh;
+    height: 160vh;
     color:white;
     display: grid;
     padding:30px;
@@ -47,4 +47,72 @@
     grid-row: 3/6;
  border-radius: 12px;
     overflow: hidden;
+}
+
+@media screen and (min-width: 1600px) {
+ .tile{
+     height:160vh
+ }
+}
+@media screen and (max-width: 1600px) {
+ .menu{
+     display: none;
+ }
+ .checkout{
+     display: none;
+ }
+ .cart{
+     grid-column: 6/8;
+ }
+}
+@media screen and (max-width: 1300px) {
+    .tile{
+        display: grid;
+        grid-template-columns: 1fr;
+      
+    }
+    .home-page{
+        display: flex;
+    }
+ .menu{
+     display: none;
+ }
+ .checkout{
+     display: none;
+ }
+ .cart{
+     grid-row: 5/6;
+       width: 360px;
+    height: 800px;
+ }
+ 
+}
+
+@media  screen and (max-width:1024px) {
+    .home-page{
+         grid-row: 2/5;
+    width: 360px;
+    height: 800px;
+    }
+     .cart{
+         grid-column: 2/8;
+     grid-row: 6/6;
+      width: 360px;
+    height: 800px;
+ }
+}
+@media  screen and (max-width:900px) {
+   .tile{
+       height: 100vh;
+        display: block;
+        left: 0;
+   }
+   .home-page{
+      width: 216px;
+    height: 480px;
+   }
+   .cart{
+       display: none;
+   }
+    
 }

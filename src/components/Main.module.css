@@ -1,7 +1,16 @@
 .main {
-  
+  position: relative;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5px;
+    
+}
+
+@media  screen and (max-width:900px) {
+    .main{
+       grid-template-columns: 1fr;
+       place-items: center;
+       margin: 0 auto;
+    }
+    
 }

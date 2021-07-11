@@ -4,3 +4,8 @@
   
     flex-direction: column;
 }
+@media screen and (max-width: 600px) {
+ .right-pane{
+    top: 0;
+ }
+}

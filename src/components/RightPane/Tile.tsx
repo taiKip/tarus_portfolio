@@ -17,15 +17,16 @@ const Tile = ({ preview ,id}: { preview: IPreview,id:string}) => {
     const [checkoutImageIsLoaded, setCheckoutImageIsLoaded] = useState(false)
  
 
-    const { setRef, visible } = useOnScreen({ threshold: 0.15 })
+    const { setRef, visible } = useOnScreen({ threshold: 0.5 })
 const {setState} = useContext(PageTrackerContext)
     useEffect(() => {
         if (visible) {
      setState(id)
             return;
         }
+        setState('')
      
-    })
+    },[visible])
     
     const handleHomeOnload = () => {
         setHomeImageIsLoaded(true)

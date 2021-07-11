@@ -1,0 +1,79 @@
+.about{
+    height: 100vh;
+    display: flex;
+    
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+    opacity: 0;
+
+    justify-content: space-between;
+    transition: all 300ms ease-in;
+    text-align: center;
+    padding:20px;
+
+
+}
+.skills{
+   
+    width:100%
+}
+.animate{
+ opacity: 1;;
+}
+.about h1{
+    font-size: 5em;
+    
+}
+.about span{
+font-size: 2em;
+font-weight: 500;
+line-height: 2em;
+}
+
+@media screen and (max-width: 1600px) {
+ 
+.about h1{
+    font-size: 3em;
+    
+}
+.about span{
+font-size: 1.3em;
+font-weight: 300;
+line-height: 1.5em;
+}
+}
+
+@media screen and (max-width: 1024px) {
+    .about{
+        width: 80%;
+       padding: 40px;
+      
+       
+    }
+.about h1{
+    font-size: 4em;
+    
+}
+.about span{
+font-size: 2em;
+
+line-height: 1.5em;
+}
+}
+@media screen and (max-width: 720px) {
+    .about{
+        width: 100%;
+       padding: 20px;
+        right:0;
+    }
+.about h1{
+    font-size: 2em;
+    
+}
+.about span{
+font-size: 1.1em;
+
+line-height: 1.5em;
+}
+}

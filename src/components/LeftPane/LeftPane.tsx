@@ -10,7 +10,7 @@ const LeftPane = () => {
     const { state } = useContext(PageTrackerContext)
     const { dataArray } = useFetch()
 
-    let styles = `${classes.left} ${state && classes.show}`
+    let styles = `${classes.left} ${state&&classes.show}`
     return (
         <div className={styles}>
             {dataArray.map(data => {
@@ -18,7 +18,7 @@ const LeftPane = () => {
                    
                     return <DescriptionPage key={data.id} item={{ id: data.id, ...data.description }}/>
                 }
-                return 
+                return ""
           })}
           
         </div>

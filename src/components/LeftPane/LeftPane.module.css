@@ -6,10 +6,35 @@
     height: 100vh;
     width: 100%;
     padding: 50px;
-transform: translateX(-150%);
-    transition: all 2s ease-in;
+transform: translateX(-100%);
+
+
 }
 
 .show{
-    transform: translateX(0);
+    animation: animate 1s linear forwards;
+     
+}
+
+@media  screen and (max-width:1200) {
+    .left{
+        transform: translateX(-50%);
+    }
+    
+}
+@media  screen and (max-width:900px) {
+    .left{
+      transform: translateX(-100%);
+      display: flex;
+    height: 80vh;
+    top: 10vh;
+    background:rgba(255, 255, 255, 0.808);
+    }
+  
+}
+@keyframes animate {
+    0%{transform: translateX(-100%);}
+    80%{transform: translateX(10%);}
+90%{transform: translateX(5%);}
+100%{transform: translateX(0%);}
 }
