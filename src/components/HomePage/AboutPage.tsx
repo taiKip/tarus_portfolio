@@ -13,11 +13,7 @@ const AboutPage = React.forwardRef<Ref, Props>((props, ref) => {
         <h1>ABOUT</h1>
 
         <span>
-          I am a graduate of IT engineering from Centria University Of Applied
-          Sciences.What drew me to love software development honestly is the
-          roller coaster feeling it brings.Its not hard but complex,coupled with
-          the hope of, "I know I am going to figure out the solution and always
-          ending up figuring it out"
+         I am software developer with a passion for developing simple software solutions that improve the lives of those around me
         </span>
        
                   <Skills />

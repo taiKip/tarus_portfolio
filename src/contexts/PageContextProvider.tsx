@@ -1,16 +1,16 @@
-import React, { ReactNode } from 'react'
-import { useReducer } from 'react'
-import { useState } from 'react'
-import { IState } from '../interfaces/IState'
-import PageTrackerContext from './PageTrackerContext'
+import { ReactNode } from "react";
 
-const PageTrackerProvider = ({children}:{children:ReactNode}) => {
-   const [state,setState]  = useState<string>('')
-    return (
-        <PageTrackerContext.Provider value={{  state, setState }}>
-            {children}
-        </PageTrackerContext.Provider>
-    )
-}
+import { useState } from "react";
 
-export default PageTrackerProvider
+import PageTrackerContext from "./PageTrackerContext";
+
+const PageTrackerProvider = ({ children }: { children: ReactNode }) => {
+  const [state, setState] = useState<string>("");
+  return (
+    <PageTrackerContext.Provider value={{ state, setState }}>
+      {children}
+    </PageTrackerContext.Provider>
+  );
+};
+
+export default PageTrackerProvider;

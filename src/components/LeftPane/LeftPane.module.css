@@ -39,3 +39,31 @@ transform: translateX(-100%);
 90%{transform: translateX(5%);}
 100%{transform: translateX(0%);}
 }
+@media  screen and (max-width:900px) {
+    .left{
+      transform: translateX(-100%);
+      display: flex;
+   
+    position:fixed;
+   
+    background:rgba(255, 255, 255, 0.808);
+    }
+
+}
+
+@media  screen and (max-width:480px) {
+    .left{
+        height: 70vh;
+        position:sticky;
+     top: 20vh;
+        background:white;
+      
+        padding: 20px;
+        transform: translateX(0);
+
+    }
+    .show{
+        animation: none;
+    }
+    
+}

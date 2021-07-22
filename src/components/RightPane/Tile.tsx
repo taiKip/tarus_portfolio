@@ -17,7 +17,7 @@ const Tile = ({ preview ,id}: { preview: IPreview,id:string}) => {
     const [checkoutImageIsLoaded, setCheckoutImageIsLoaded] = useState(false)
  
 
-    const { setRef, visible } = useOnScreen({ threshold: 0.35 })
+    const { setRef, visible } = useOnScreen({ threshold: 0.40 })
 const {setState} = useContext(PageTrackerContext)
     useEffect(() => {
         if (visible) {

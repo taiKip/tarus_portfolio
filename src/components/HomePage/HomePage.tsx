@@ -1,6 +1,5 @@
 
-import { useEffect } from 'react'
-import { useOnScreen } from '../../hooks/useOnScreen'
+
 import Scroll from '../../UI/Scroll'
 import classes from './HomePage.module.css'
 const HomePage = () => {
@@ -13,7 +12,7 @@ const HomePage = () => {
                 <h1 className={classes.header}>Hi , I AM VICTOR TARUS</h1>
             </div>
             <div>
-                <h3>I Am A Front-end Web Developer </h3>
+                <h3>I Am A  FullStack Web Developer </h3>
             </div>
                
             

@@ -131,3 +131,12 @@
    }
     
 }
+@media  screen and (max-width:480px) {
+   .tile{
+       height: 80vh;
+        display: block;
+        left: 0;
+   }
+
+    
+}

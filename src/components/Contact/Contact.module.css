@@ -41,3 +41,6 @@ transition:all 0.5s ease-in-out;
 .links a:hover{
 transform: scale(1.2);
 }
+.more{
+    background: white;
+}
